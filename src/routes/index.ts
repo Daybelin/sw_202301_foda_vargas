@@ -1,7 +1,9 @@
 import express from 'express';
 const router  = express.Router();
 
+
 import empresasRouter from './empresas/empresas';
+import UsuariossRouter from './Usuarios/usuarios';
 // REST API
 // Internet -> HTTP --> REST API -> DB
 // SOAP XML wsdl 
@@ -25,6 +27,7 @@ res.json (jsonResp);
 });
 
 router.use ('/empresas', empresasRouter)
+router.use ('/Usuarios', UsuariossRouter)
 
 //router.get  router.post  router.purt  router.delete  router.use
 export default router;
